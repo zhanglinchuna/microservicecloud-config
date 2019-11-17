@@ -1,14 +1,26 @@
 spring:
-  profiles:
-    active:
-      - default
----
-spring:
   application:
     name: microservicecloud-config-dev
   profiles: dev #开发环境
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB01?useUnicode=true&characterEncoding=utf8
+    username: dev_root
+    password: 123456
 ---
 spring:
   application:
     name: microservicecloud-config-test
   profiles: test  #测试环境
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB02?useUnicode=true&characterEncoding=utf8
+    username: test_root
+    password: test123
+---
+spring:
+  application:
+    name: microservicecloud-config-pro
+  profiles: pro  #生产环境
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB03?useUnicode=true&characterEncoding=utf8
+    username: pro_root
+    password: pro123
