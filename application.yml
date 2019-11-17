@@ -4,11 +4,11 @@ spring:
       - default
 ---
 spring:
+  application:
+    name: microservicecloud-config-dev
   profiles: dev #开发环境
-    application:
-      name: microservicecloud-config-dev
 ---
 spring:
+  application:
+    name: microservicecloud-config-test
   profiles: test  #测试环境
-    application:
-      name: microservicecloud-config-test
